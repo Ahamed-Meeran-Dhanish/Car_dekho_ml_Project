@@ -1,124 +1,118 @@
+![GitHub repo size](https://img.shields.io/github/repo-size/Ahamed-Meeran-Dhanish/Car_dekho_ml_Project?style=plastic)
+![GitHub language count](https://img.shields.io/github/languages/count/Ahamed-Meeran-Dhanish/Car_dekho_ml_Project?style=plastic)
+![GitHub top language](https://img.shields.io/github/languages/top/Ahamed-Meeran-Dhanish/Car_dekho_ml_Project?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/Ahamed-Meeran-Dhanish/Car_dekho_ml_Project?color=red&style=plastic)
 
+# Car Dekho Price Prediction
 
-![GitHub repo size](https://img.shields.io/github/repo-size/sumit0072/Car-Price-Prediction-Project?style=plastic)
-![GitHub language count](https://img.shields.io/github/languages/count/sumit0072/Car-Price-Prediction-Project?style=plastic)
-![GitHub top language](https://img.shields.io/github/languages/top/sumit0072/Car-Price-Prediction-Project?style=plastic)
-![GitHub last commit](https://img.shields.io/github/last-commit/sumit0072/Car-Price-Prediction-Project?color=red&style=plastic)
+## Table of Contents
 
+1. [Objective](#objective)
+2. [Quick Demo](#quick-demo)
+3. [Dataset Preview](#dataset-preview)
+4. [Description of Variables](#description-of-variables)
+5. [Project Directory Structure](#project-directory-structure)
+6. [Installation](#installation)
+7. [Technologies Used](#technologies-used)
 
-<h1>Car Dekho Price Prediction</h1>
+---
 
-<h2>Table of contents</h2>
+## Objective
+The goal of this project is to predict the selling price of used cars based on various features such as Present Price, Kms Driven, Owner, Fuel Type, Seller Type, and Transmission. The dataset used in this project is from [CarDekho](https://www.cardekho.com).
 
-<div class="alert alert-info alert-info" style="margin-top: 20px">
+## Quick Demo
+![Demo GIF](https://github.com/Ahamed-Meeran-Dhanish/Car_dekho_ml_Project/blob/main/demo.gif)
 
-1. [Objective](#1)<br>
-2. [Quick Demo](#2)<br>   
-3. [Dataset Prview](#3)<br>
-4. [Description of variables in the dataset](#4)<br>
-5. [Car Price Prediction directory tree](#5)<br>
-6. [Installation](#6)<br>
-7. [Technologies Used](#7)<br>
-</div>
-<hr>
+Users can enter car details through the UI, and the application will predict the car’s selling price.
 
-<h3>Objective</h3><a id="1"></a>
-<p>In this project, the objective is to predict Car Selling Price on various features like Car's Present_Price, Kms_Driven, Owner, Fuel_Type, Seller_Type, Transmission. We will use the CAR DEKHO dataset from Kaggle. This dataset contains information about used cars listed on <a href='www.cardekho.com'><u>website</u></a></p>
+## Dataset Preview
+A preview of the top five rows of the dataset:
 
-<h3>Quick Demo</h3><a id="2"></a>
+| Car_Name | Year | Selling_Price | Present_Price | Kms_Driven | Fuel_Type | Seller_Type | Transmission | Owner |
+|----------|------|--------------|---------------|------------|-----------|-------------|--------------|-------|
+| Ritz     | 2014 | 3.35         | 5.59          | 27000      | Petrol    | Dealer      | Manual       | 0     |
+| SX4      | 2013 | 4.75         | 9.54          | 43000      | Diesel    | Dealer      | Manual       | 0     |
+| Ciaz     | 2017 | 7.25         | 9.85          | 6900       | Petrol    | Dealer      | Manual       | 0     |
+| Wagon R  | 2011 | 2.85         | 4.15          | 5200       | Petrol    | Dealer      | Manual       | 0     |
+| Swift    | 2014 | 4.60         | 6.87          | 42450      | Diesel    | Dealer      | Manual       | 0     |
 
-![demo_gif](https://github.com/sumit0072/Car-Price-Prediction-Project/blob/main/demo.gif)
+## Description of Variables
+The dataset contains information about used cars listed on [CarDekho](https://www.cardekho.com). It includes:
 
-<br><p>We can predict Car Selling Price by filling the data over UI and after that prediction will be displayed over UI.</p>
+- **Car_Name:** Name of the car model
+- **Year:** Year the car was purchased
+- **Selling_Price:** Price at which the car was sold
+- **Present_Price:** Current price of the same car model
+- **Kms_Driven:** Number of kilometers the car has been driven
+- **Fuel_Type:** Type of fuel used (Petrol/Diesel/CNG)
+- **Seller_Type:** Type of seller (Dealer/Individual)
+- **Transmission:** Transmission type (Manual/Automatic)
+- **Owner:** Number of previous owners
 
-<h3>Dataset Prview</h3><a id="3"></a>
-A preview of top five rows of the Car Dekho dataset.
-
-| | Car_Name | Year | Selling_Price | Present_Price | Kms_Driven | Fuel_Type | Seller_Type | Transmission | Owner |
-|-| -------- | ---- | ------------- | ------------- | ---------- | --------- | ----------- | ------------ | ----- |
-|0|     ritz | 2014 |	       3.35 |          5.59 |	   27000 |	  Petrol |	    Dealer |       Manual |     0 |
-|1|      sx4 | 2013 |          4.75 |	       9.54 |	   43000 |    Diesel |	    Dealer |	   Manual |	    0 |
-|2| 	ciaz | 2017	|          7.25 |          9.85	|       6900 |	  Petrol |  	Dealer |	   Manual |	    0 |
-|3|  wagon r | 2011 |	       2.85 |	       4.15	|       5200 |	  Petrol |	    Dealer |	   Manual |	    0 |
-|4|    swift | 2014 |          4.60	|          6.87	|      42450 |    Diesel |   	Dealer |       Manual |	    0 |
-
-<h3>Description of variables in the dataset</h3><a id="4"></a>
-Above dataset contains information about used cars listed on <a href='www.cardekho.com'><u>website</u></a>. This data can be used for a lot of purposes such as car price prediction using Machine Learning algorithms.
-The columns in the given dataset are as follows:
-
-```Car_Name:``` Name of Car sold
-
-```Year:``` Year in which car was bought
-
-```Selling_Price:``` Price at which car sold
-
-```Present_Price:``` Price of same car model in current year 
-
-```Kms_Driven:``` Number of Kilometers Car driven before it is sold
-
-```Fuel_Type:``` Type of fuel Car uses
-
-```Seller_Type:``` Type of seller 
-
-```Transmission:``` Gear transmission of the car (Automatic / Manual)
-
-```Owner:``` Number of previous owners 
- 
-<h3>Car Price Prediction directory tree</h3><a id="5"></a>
-
+## Project Directory Structure
 ```
-├─ Templates
-│  └─ index.html
+Car-Price-Prediction-Project/
+├── Templates/
+│   └── index.html
 │
-├─ app.py
+├── app.py
 │
-├─ demo.gif
+├── demo.gif
 │
-├─ rf_regression_model.pkl
-│  
-├─ Car Dekho Price Prediction.ipynb
+├── rf_regression_model.pkl
 │
-├─ LICENSE
-│  
-├─ car data.csv
+├── Car_Dekho_Price_Prediction.ipynb
 │
-├─ Procfile
+├── car_data.csv
 │
-├─ README.md 
+├── Procfile
 │
-└─ requirements.txt
-    
+├── README.md
+│
+└── requirements.txt
 ```
-    
-```Templates``` : contains templates for UI
 
-```app.py``` : Front and back end portion of the web application
+### Folder & File Details:
+- **Templates/** - Contains HTML templates for UI
+- **app.py** - Backend logic for the web application
+- **Car_Dekho_Price_Prediction.ipynb** - Jupyter Notebook with model training and analysis
+- **rf_regression_model.pkl** - Pretrained machine learning model
+- **requirements.txt** - List of dependencies
+- **car_data.csv** - Raw dataset in CSV format
+- **Procfile** - Deployment configuration for Heroku
 
-```Car Dekho Price Prediction.ipynb``` : conatains ipynb file (Jypiter Notebook file)
+## Installation
 
-```rf_regression_model.pkl```  : contains model for prediction
+1. **Clone the Repository**:
+   ```sh
+   git clone https://github.com/Ahamed-Meeran-Dhanish/Car_dekho_ml_Project.git
+   cd Car_dekho_ml_Project
+   ```
+2. **Create a Virtual Environment & Activate It**:
+   ```sh
+   python -m venv env
+   source env/bin/activate  # On Mac/Linux
+   env\Scripts\activate  # On Windows
+   ```
+3. **Install Required Dependencies**:
+   ```sh
+   pip install -r requirements.txt
+   ```
+4. **Run the Application**:
+   ```sh
+   python app.py
+   ```
+5. **Open in Browser**:
+   ```
+   http://127.0.0.1:5000/
+   ```
 
-```requirements.txt``` : required libraries 
+## Technologies Used
+![Made with Python](https://forthebadge.com/images/badges/made-with-python.svg)
 
-```car data.csv```  : conatins raw data as csv file
+[<img target="_blank" src="https://flask.palletsprojects.com/en/1.1.x/_images/flask-logo.png" width=170>](https://flask.palletsprojects.com/en/1.1.x/)
 
-<h3>Installation</h3><a id=""></a>
+---
 
-* Clone this repository and unzip it.
+🚀 **Happy Coding!**
 
-* create new env with python 3 and activate it .
-
-* Install the required packages using pip install -r requirements.txt
-
-* Execute the command: python app.py
-
-* Open ```http://127.0.0.1:5000/``` in your browser.
-
-<h3>Technologies Used</h3><a id=""></a>
-
-![](https://forthebadge.com/images/badges/made-with-python.svg)
-
-[<img target="_blank" src="https://flask.palletsprojects.com/en/1.1.x/_images/flask-logo.png" width=170>](https://flask.palletsprojects.com/en/1.1.x/) 
-
-## License
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
